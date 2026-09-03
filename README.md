@@ -7,7 +7,7 @@
   body {
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(to top, #ffb6c1, #ffe4e1);
+    background: linear-gradient(to top, #ffdde1, #ee9ca7);
     height: 100vh;
   }
   .rose {
@@ -16,7 +16,7 @@
     height: 40px;
     background-image: url('https://pngimg.com/uploads/rose/rose_PNG667.png');
     background-size: cover;
-    animation: fall 5s linear infinite;
+    animation: fall 6s linear forwards;
   }
   @keyframes fall {
     0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
@@ -32,7 +32,7 @@
     color: #b30059;
     opacity: 0;
     animation: showText 2s ease forwards;
-    animation-delay: 5s;
+    animation-delay: 6s; /* يظهر بعد سقوط الورود */
   }
   @keyframes showText {
     to { opacity: 1; transform: scale(1.1); }
@@ -41,14 +41,15 @@
 </head>
 <body>
 <script>
-  for (let i = 0; i < 30; i++) {
+  // توليد ورود عشوائية
+  for (let i = 0; i < 25; i++) {
     const rose = document.createElement('div');
     rose.className = 'rose';
     rose.style.left = Math.random() * window.innerWidth + 'px';
-    rose.style.animationDelay = Math.random() * 5 + 's';
+    rose.style.animationDelay = Math.random() * 3 + 's';
     document.body.appendChild(rose);
   }
 </script>
 <div class="text">bonjouuuurattttt 3inaya 🌹</div>
 </body>
-</html># bonjouuuuur
+</html>
