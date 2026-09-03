@@ -32,7 +32,7 @@
     color: #b30059;
     opacity: 0;
     animation: showText 2s ease forwards;
-    animation-delay: 6s; /* يظهر بعد سقوط الورود */
+    animation-delay: 7s; /* يظهر بعد سقوط الورود */
   }
   @keyframes showText {
     to { opacity: 1; transform: scale(1.1); }
@@ -42,7 +42,7 @@
 <body>
 <script>
   // توليد ورود عشوائية
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < 30; i++) {
     const rose = document.createElement('div');
     rose.className = 'rose';
     rose.style.left = Math.random() * window.innerWidth + 'px';
